@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.gridDivVert {
+    position: relative;
+    border: 1px solid black;
+    width: 16.66%;
+    height: 16.66%;
+    display: flex;
+}
+.gridDivHori {
+    position: relative;
+    border: 1px solid black;
+    width: 16.66%;
+    height: 16.66%;
+}
+#gridCont {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 1000px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
