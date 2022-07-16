@@ -19,9 +19,14 @@
 #gridCont {
     display: flex;
     flex-wrap: wrap;
-    width: 1000px;
-    height: 1000px;
+    width: 1280px;
+    height: 600px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+button {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 5px;
 }
