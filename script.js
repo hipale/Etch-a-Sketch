@@ -14,18 +14,20 @@ gridHori.className = "gridDivHori";
 gridCont.appendChild(gridHori);
 }
 };
-//gridVert.style.width = "100% / gridDivNum";
+gridVert.style.width = "100% / gridDivNum";
+gridVert.style.height = "100% / gridDivNum";
 };
 
 gridCont.addEventListener("mouseover", colorChange);
 function colorChange(e) {
-randomNum = Math.round(Math.random() * 100000)
-    randomColor =`#${randomNum}`
-    if (e.target.style.backgroundColor == randomColor) {
-        e.target.style.backgroundColor = "white";
-    } else {
-        e.target.style.backgroundColor = randomColor;
-    };
+    randomColor =`#${Math.round(Math.random() * 100000)}`;
+    targetColor = e.target.style.backgroundColor;
+        if (targetColor == "white"){ 
+            let changTargetColor = parseInt(targetColor.split("").slice(0, 1).join(""));
+            e.target.style.backgroundColor = `#${changTargetColor / (0.1 * changTargetColor)}`;
+        } else {
+            e.target.style.backgroundColor = randomColor; 
+        }
 }
 
 const button = document.querySelector("button");
